@@ -8,45 +8,60 @@ public class Main {
 
 	public static void main(String[] args) {
 		Calc calc = new Calc ();
-			Scanner Aux = new Scanner (System.in);		
+			Scanner aux = new Scanner (System.in);		
 	        System.out.println("\t Calculadora");
 	        System.out.println("1. Soma");
 	        System.out.println("2. Subtracao");
 	        System.out.println("3. Divisao");
 	        System.out.println("4. Multiplicacao");
 	        System.out.println("4. Sair");
-	        
-	        do{
-	            menu();
-	            opcao = entrada.nextInt();
-	            
+	        System.out.println("Digite a opcao:");
+	        int x=aux.nextInt();
+	        int opcao=x;
+	      
+	        do {
+	        	Scanner num1= new Scanner (System.in);	
+	        	System.out.println("Digite o primeiro numero:");
+	        	int numero1=num1.nextInt();
+	        	
+	        	Scanner num2= new Scanner (System.in);	
+	        	System.out.println("Digite o segundo numero:");
+	        	int numero2=num2.nextInt();
+	        	
+	        	
 	            switch(opcao){
 	            case 1:
-	                Soma();
+	                System.out.println("Soma:: "+numero1+"+"+numero2 +"=" + calc.sum(numero1, numero2));
 	                break;
 	                
 	            case 2:
-	                Subtracao();
+	            	System.out.println("Subtracao: " +numero1+"-"+numero2 +"=" + calc.sub(numero1, numero2));
 	                break;
 	                
 	            case 3:
-	                Divisao();
+	            	System.out.println("Divisao:"+numero1+"/"+numero2 +"=" + calc.div(numero1, numero2));
 	                break;
 	                
 	            case 4:
-	                Multiplicacao();
+	            	System.out.println("Multiplicacao: "  +numero1+"*"+numero2 +"="+ calc.mult(numero1, numero2));
 	                break;
+	                
 	            case 5:
-	                Sair();
+	              	System.out.println("Saindo...:");
 	                break;
 	            
 	            default:
 	                System.out.println("Opção inválida.");
 	            }
 	            
-	        } while(opcao != 0);
+	        } while(opcao != 5);
 		
 
+	}
+
+	private static void menu() {
+		// TODO Auto-generated method stub
+		
 	}
 
 
