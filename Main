@@ -14,7 +14,7 @@ public class Main {
 	        System.out.println("2. Subtracao");
 	        System.out.println("3. Divisao");
 	        System.out.println("4. Multiplicacao");
-	        System.out.println("4. Sair");
+	        System.out.println("5. Sair");
 	        System.out.println("Digite a opcao:");
 	        int x=aux.nextInt();
 	        int opcao=x;
@@ -53,6 +53,17 @@ public class Main {
 	            default:
 	                System.out.println("Opção inválida.");
 	            }
+	            
+	            Scanner auxi = new Scanner (System.in);		
+		        System.out.println("\t Calculadora");
+		        System.out.println("1. Soma");
+		        System.out.println("2. Subtracao");
+		        System.out.println("3. Divisao");
+		        System.out.println("4. Multiplicacao");
+		        System.out.println("5. Sair");
+		        System.out.println("Digite a opcao:");
+		        int xy=auxi.nextInt();
+		        opcao=xy;
 	            
 	        } while(opcao != 5);
 		
